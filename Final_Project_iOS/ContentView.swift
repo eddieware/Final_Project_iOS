@@ -9,8 +9,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var fetch = FetchToDo()
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            
+            // 2.
+            // fetch ObservedObject . todos @Published var todos
+            List(fetch.todos) { todo in
+                VStack(alignment: .leading) {
+                    // 3.
+                    Text(todo.id.description)
+                    //Text(todo.userId.description)
+                    Text(todo.title) //accedemos a la propiedad title del modelo
+                   // Text(todo.authors)
+                    //Text(todo.description)
+                    //Image(todo.image)
+                    //Text(todo.year)
+                        
+                            
+                    
+                        .font(.system(size: 11))
+                        .foregroundColor(Color.gray) //description es usada como un to string porque es un INT
+                    
+                    Text("Press the button")
+                    
+                       Button(action: {
+                       print("pressed!!!!!!!!")
+                       
+                       }) {Text("Clickme")}
+                    
+                    
+                }
+            }
+        }//Fin VStack
     }
 }
 
