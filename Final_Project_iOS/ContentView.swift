@@ -18,13 +18,13 @@ struct ContentView: View {
             List(fetch.todos) { todo in
                 VStack(alignment: .leading) {
                     // 3.
-                    Text(todo.id.description)
+                   Text(todo.id.description)
                     //Text(todo.userId.description)
-                    Text(todo.title) //accedemos a la propiedad title del modelo
-                   // Text(todo.authors)
-                    //Text(todo.description)
-                    //Image(todo.image)
-                    //Text(todo.year)
+                   Text(todo.title) //accedemos a la propiedad title del modelo
+                   Text(todo.authors)
+                   Text(todo.description)
+                   Image(todo.image)
+                   Text(todo.year.description)
                         
                             
                     
