@@ -16,6 +16,7 @@
 		C53AE67C244A50C100A60C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53AE67A244A50C100A60C5A /* LaunchScreen.storyboard */; };
 		C53AE684244A50F100A60C5A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE683244A50F100A60C5A /* Model.swift */; };
 		C53AE6B0244A8DEB00A60C5A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C53AE6AF244A8DEB00A60C5A /* SDWebImageSwiftUI */; };
+		C53AE6B3244A9BCA00A60C5A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B2244A9BCA00A60C5A /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C53AE67B244A50C100A60C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C53AE67D244A50C100A60C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C53AE683244A50F100A60C5A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C53AE6B2244A9BCA00A60C5A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		C53AE66B244A50BE00A60C5A /* Final_Project_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C53AE6B1244A9B3C00A60C5A /* Helper */,
 				C53AE66C244A50BE00A60C5A /* AppDelegate.swift */,
 				C53AE66E244A50BE00A60C5A /* SceneDelegate.swift */,
 				C53AE673244A50BE00A60C5A /* ContentView.swift */,
@@ -81,6 +84,14 @@
 				C53AE678244A50C100A60C5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C53AE6B1244A9B3C00A60C5A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C53AE6B2244A9BCA00A60C5A /* ImageLoader.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			files = (
 				C53AE684244A50F100A60C5A /* Model.swift in Sources */,
 				C53AE66D244A50BE00A60C5A /* AppDelegate.swift in Sources */,
+				C53AE6B3244A9BCA00A60C5A /* ImageLoader.swift in Sources */,
 				C53AE672244A50BE00A60C5A /* Final_Project_iOS.xcdatamodeld in Sources */,
 				C53AE674244A50BE00A60C5A /* ContentView.swift in Sources */,
 				C53AE66F244A50BE00A60C5A /* SceneDelegate.swift in Sources */,

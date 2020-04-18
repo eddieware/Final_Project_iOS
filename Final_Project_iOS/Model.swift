@@ -20,25 +20,13 @@ struct Book: Decodable, Identifiable {
     public var year: Int
     
 }
-//courses = Course
-//books = Book
-class NetworkManager: ObservableObject{
-    var didChange = PassthroughSubject<NetworkManager, Never>()
-    
-    var books1 = [Book](){
-        didSet{
-            didChange.send(self)
-        }
-    }
-}
-
 
 
 //CODEAABLE E IDENTIFIABLE IS A PROTOCOL
 
 //The struct conforms to the Codable protocol to be able to decode the model from the JSON File and the struct conforms to the Identifiable protocol, which allows the items to be listed in a List.
 class FetchToDo: ObservableObject {
-  // 1.
+ 
     
   @Published var todos = [Book]() //Encierras el modelo en una variable @Published properti wraper usada en classes para compartir el valor de la variable
      
@@ -65,3 +53,6 @@ class FetchToDo: ObservableObject {
         }.resume()
     }
 }
+
+
+
