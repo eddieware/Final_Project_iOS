@@ -47,6 +47,8 @@ struct ContentView: View {
                     }
                 }.navigationBarTitle("Books App")
             }
+            
+            
         }//Fin VStack
         
     }
