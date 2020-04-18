@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 struct Book: Decodable, Identifiable {
     
@@ -18,6 +19,17 @@ struct Book: Decodable, Identifiable {
     public var image: String
     public var year: Int
     
+}
+//courses = Course
+//books = Book
+class NetworkManager: ObservableObject{
+    var didChange = PassthroughSubject<NetworkManager, Never>()
+    
+    var books1 = [Book](){
+        didSet{
+            didChange.send(self)
+        }
+    }
 }
 
 
@@ -41,6 +53,8 @@ class FetchToDo: ObservableObject {
                      //print(decodedData)
                     DispatchQueue.main.async {
                         self.todos = decodedData
+                        print("Parse success")
+                        // Si da error in parse revisar tipo de dato y estructura del Json
                     }
                 } else {
                     print("No data")
