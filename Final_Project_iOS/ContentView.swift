@@ -26,13 +26,14 @@ struct ContentView: View {
                     
                        //Text(todo.id.description)
                         Text(todo.title).bold().font(.system(.title))
+                        Spacer()
                         //accedemos a la propiedad title del modelo
-                        Text("Autor :"+todo.authors).font(.system(.headline))
-                        Text(todo.description)
+                        Text("Autor: "+todo.authors).font(.system(.headline))
+                        Text("Reseña: "+todo.description)
                         //Image(todo.image)
                         
                        Text(todo.year.description)
-                        .font(.system(size: 11))
+                        .font(.system(size: 22))
                             .foregroundColor(Color.gray) //description es usada como un to string porque es un INT
                         
                         /*Text("Press the button")
