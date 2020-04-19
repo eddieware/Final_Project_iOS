@@ -38,7 +38,7 @@ class FetchToDo: ObservableObject {
                 if let todoData = data {
                     // 3.
                     let decodedData = try JSONDecoder().decode([Book].self, from: todoData)
-                     //print(decodedData)
+                    //print(decodedData) //contiene el arreglo de todo el json
                     DispatchQueue.main.async {
                         self.todos = decodedData
                         print("GET Parse success")

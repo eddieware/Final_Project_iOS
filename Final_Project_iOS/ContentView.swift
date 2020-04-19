@@ -11,6 +11,7 @@ import AVKit
 
 
 struct ContentView: View {
+    let font1 = Font.system(size: 25).bold()
     
     @ObservedObject var fetch = FetchToDo()
     
@@ -20,26 +21,40 @@ struct ContentView: View {
             NavigationView{
                 // 2.
                 // fetch ObservedObject . todos @Published var todos
+             
+                
+                
                 List(fetch.todos) { todo in
                     VStack(alignment: .leading) {
                         ImageView(withURL: todo.image,width: 375, height: 200, type: 1)
                     
                        //Text(todo.id.description)
-                        Text(todo.title).bold().font(.system(.title))
-                        Spacer()
+                        HStack{
+                            
+                            Text(todo.title).bold().font(.system(.title))
+                            Spacer()
+                            Button(action: {
+                                
+                            print("favorite  button pressed!!!!!!!!")
+                                
+                            }) {Image(systemName: "heart.fill").font(self.font1)}
+                        }
+                        
+                        
                         //accedemos a la propiedad title del modelo
                         Text("Autor: "+todo.authors).font(.system(.headline))
                         Text("Reseña: "+todo.description)
                         //Image(todo.image)
-                        
-                       Text(todo.year.description)
+                        Text(todo.year.description)
                         .font(.system(size: 22))
                             .foregroundColor(Color.gray) //description es usada como un to string porque es un INT
+                        
                 
                         
                         
                     }
                 }.navigationBarTitle("Books App")
+               
             }
             
             

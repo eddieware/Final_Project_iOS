@@ -16,6 +16,7 @@ var body: some View {
     NavigationView{
         List{
             Text("Something Favorite Here")
+            
         }
        
         .navigationBarTitle("Favorite Books")

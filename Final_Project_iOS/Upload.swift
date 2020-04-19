@@ -56,6 +56,8 @@ var body: some View {
                         do{
                             let postResponse = try JSONDecoder().decode(Book.self, from: data1!)
                             
+                            
+                            
                             DispatchQueue.main.async
                                 {
                                     self.posting = postResponse
