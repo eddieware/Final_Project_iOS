@@ -12,7 +12,7 @@ import AVKit
 struct Upload: View {
 
     @State private var posting: PostModelResponse?
-    var items: Book
+    
    
     
 var body: some View {
@@ -21,12 +21,13 @@ var body: some View {
     NavigationView{
         List{
             Text("Something To Upload here")
+            Button(action: {
+                       self.superUpload()
+                   print("pressed!!!!!!!!")
+                   }) {Text("Clickme")}
         }.navigationBarTitle("Upload Book") //Fin List
         
-        Button(action: {
-        
-        print("pressed!!!!!!!!")
-        }) {Text("Clickme")}
+       
         
         }//Fin Navigation View
     
@@ -51,7 +52,7 @@ var body: some View {
          public var year: Int
          
          */
-        let newJSON : [String:Any] = ["id": 14, "title":"Eduardo Book","authors":"Eduardo Mejia","description":"Book About Me","image":"Some_Image","year":"2020"]
+        let newJSON : [String:Any] = ["title":"Eduardo Book","authors":"Eduardo Mejia","description":"Book About Me","image":"Some_Image","year":"2020"]
         let JSONobject : Data
         
         do{

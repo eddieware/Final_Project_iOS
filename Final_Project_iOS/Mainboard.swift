@@ -20,7 +20,7 @@ struct Mainboard: View {
                 Text("Books").font(font)
             }
             
-            Upload(items: Book).tabItem{
+            Upload().tabItem{
                 Image(systemName: "square.and.arrow.up").font(font)
                 Text("Upload").font(font)
             }

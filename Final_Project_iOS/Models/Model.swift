@@ -41,14 +41,14 @@ class FetchToDo: ObservableObject {
                      //print(decodedData)
                     DispatchQueue.main.async {
                         self.todos = decodedData
-                        print("Parse success")
+                        print("GET Parse success")
                         // Si da error in parse revisar tipo de dato y estructura del Json
                     }
                 } else {
                     print("No data")
                 }
             } catch {
-                print("Error in parse")
+                print("Error in GET parse")
             }
         }.resume()
     }
