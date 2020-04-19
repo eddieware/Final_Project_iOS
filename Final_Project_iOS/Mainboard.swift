@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct Mainboard: View {
+    
     let font = Font.system(size: 35).bold()
     var body: some View {
         TabView{
@@ -19,10 +20,11 @@ struct Mainboard: View {
                 Text("Books").font(font)
             }
             
-            Upload().tabItem{
+            Upload(items: Book).tabItem{
                 Image(systemName: "square.and.arrow.up").font(font)
                 Text("Upload").font(font)
             }
+            
             
             Favorites().tabItem{
                 Image(systemName: "star.circle").font(font)

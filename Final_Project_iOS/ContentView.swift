@@ -35,13 +35,7 @@ struct ContentView: View {
                        Text(todo.year.description)
                         .font(.system(size: 22))
                             .foregroundColor(Color.gray) //description es usada como un to string porque es un INT
-                        
-                        /*Text("Press the button")
-                        
-                           Button(action: {
-                           print("pressed!!!!!!!!")
-                           
-                           }) {Text("Clickme")}*/
+                
                         
                         
                     }

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct Book: Decodable, Identifiable {
+struct Book: Codable, Identifiable {
     
     public var id: Int
     public var title: String

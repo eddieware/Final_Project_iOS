@@ -20,6 +20,7 @@
 		C53AE6B5244B3AEF00A60C5A /* Mainboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B4244B3AEF00A60C5A /* Mainboard.swift */; };
 		C53AE6B7244B40D500A60C5A /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B6244B40D500A60C5A /* Favorites.swift */; };
 		C53AE6B9244B40ED00A60C5A /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B8244B40ED00A60C5A /* Upload.swift */; };
+		C53AE6BD244BA3F500A60C5A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6BC244BA3F500A60C5A /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C53AE6B4244B3AEF00A60C5A /* Mainboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainboard.swift; sourceTree = "<group>"; };
 		C53AE6B6244B40D500A60C5A /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		C53AE6B8244B40ED00A60C5A /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		C53AE6BC244BA3F500A60C5A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		C53AE66B244A50BE00A60C5A /* Final_Project_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C53AE6BA244BA3C900A60C5A /* Models */,
 				C53AE6B1244A9B3C00A60C5A /* Helper */,
 				C53AE66C244A50BE00A60C5A /* AppDelegate.swift */,
 				C53AE66E244A50BE00A60C5A /* SceneDelegate.swift */,
@@ -82,7 +85,6 @@
 				C53AE67D244A50C100A60C5A /* Info.plist */,
 				C53AE670244A50BE00A60C5A /* Final_Project_iOS.xcdatamodeld */,
 				C53AE677244A50C100A60C5A /* Preview Content */,
-				C53AE683244A50F100A60C5A /* Model.swift */,
 			);
 			path = Final_Project_iOS;
 			sourceTree = "<group>";
@@ -101,6 +103,15 @@
 				C53AE6B2244A9BCA00A60C5A /* ImageLoader.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		C53AE6BA244BA3C900A60C5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C53AE683244A50F100A60C5A /* Model.swift */,
+				C53AE6BC244BA3F500A60C5A /* PostModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53AE6B9244B40ED00A60C5A /* Upload.swift in Sources */,
+				C53AE6BD244BA3F500A60C5A /* PostModel.swift in Sources */,
 				C53AE684244A50F100A60C5A /* Model.swift in Sources */,
 				C53AE66D244A50BE00A60C5A /* AppDelegate.swift in Sources */,
 				C53AE6B3244A9BCA00A60C5A /* ImageLoader.swift in Sources */,
