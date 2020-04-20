@@ -46,6 +46,7 @@ class FetchToDo: ObservableObject {
                     DispatchQueue.main.async {
                         self.todos = decodedData
                         
+                        /*
                        for booksData in decodedData{
                         let objBook = FavoritesTable(context: self.managedObjectContext)
                         objBook.id = Int32(booksData.id)
@@ -55,8 +56,9 @@ class FetchToDo: ObservableObject {
                         objBook.year = Int16(booksData.year)
                         
                         }
-                        try? self.managedObjectContext.save()
-                        self.todos = decodedData
+                        try? self.managedObjectContext.save()*/
+ 
+                       
                         
                         print("GET Parse success")
                         // Si da error in parse revisar tipo de dato y estructura del Json

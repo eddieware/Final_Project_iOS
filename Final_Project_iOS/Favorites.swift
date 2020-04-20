@@ -10,8 +10,9 @@ import Foundation
 import SwiftUI
 
 struct Favorites: View {
-    private var fetchedobj = FetchToDo()
-//@State private var listFavorites = [Results]()
+  //  private var fetchedobj = FetchToDo()
+    @State private var listFavorites = [Book]()
+  
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(
         entity: FavoritesTable.entity(),
@@ -21,14 +22,31 @@ struct Favorites: View {
 
 var body: some View {
     NavigationView{
-        List(fetchedobj.todos){_ in
+        List(listFavorites){Book in
     
-            Text("Something Favorite Here")
+            VStack{
+                ImageView(withURL: Book.image,width: 375, height: 200, type: 1)
+                Text(Book.title)
+                Text(Book.authors)
+                Text(Book.description)
+                Text(Book.year.description)
+            }
             
             
-        }
-            
+        }.onAppear(perform:loadFavorites)
+
         .navigationBarTitle("Favorite Books")
         }
     }
+    
+    func loadFavorites(){
+        for booksData in self.booksDB{
+            var objBook = Book(id: Int(booksData.id), title: booksData.title ?? "", authors: booksData.authors ?? "", description: booksData.description, image: booksData.image ?? "", year: Int(booksData.year))
+            
+            self.listFavorites.append(objBook)
+        
+        }
+        
+    }
+    
 }
