@@ -41,7 +41,7 @@ var body: some View {
     
     func loadFavorites(){
         for booksData in self.booksDB{
-            var objBook = Book(id: Int(booksData.id), title: booksData.title ?? "", authors: booksData.authors ?? "", description: booksData.description, image: booksData.image ?? "", year: Int(booksData.year))
+            let objBook = Book(id: Int(booksData.id), title: booksData.title ?? "", authors: booksData.authors ?? "", description: booksData.description, image: booksData.image ?? "", year: Int(booksData.year))
             
             self.listFavorites.append(objBook)
         
