@@ -21,6 +21,8 @@
 		C53AE6B7244B40D500A60C5A /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B6244B40D500A60C5A /* Favorites.swift */; };
 		C53AE6B9244B40ED00A60C5A /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6B8244B40ED00A60C5A /* Upload.swift */; };
 		C53AE6BF244BE3F600A60C5A /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6BE244BE3F600A60C5A /* Decoder.swift */; };
+		C53AE6CE244D708200A60C5A /* FavoritesTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6CC244D708200A60C5A /* FavoritesTable+CoreDataClass.swift */; };
+		C53AE6CF244D708200A60C5A /* FavoritesTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53AE6CD244D708200A60C5A /* FavoritesTable+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		C53AE6B6244B40D500A60C5A /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		C53AE6B8244B40ED00A60C5A /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		C53AE6BE244BE3F600A60C5A /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		C53AE6CC244D708200A60C5A /* FavoritesTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesTable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C53AE6CD244D708200A60C5A /* FavoritesTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		C53AE660244A50BE00A60C5A = {
 			isa = PBXGroup;
 			children = (
+				C53AE6CC244D708200A60C5A /* FavoritesTable+CoreDataClass.swift */,
+				C53AE6CD244D708200A60C5A /* FavoritesTable+CoreDataProperties.swift */,
 				C53AE66B244A50BE00A60C5A /* Final_Project_iOS */,
 				C53AE66A244A50BE00A60C5A /* Products */,
 			);
@@ -191,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53AE6CF244D708200A60C5A /* FavoritesTable+CoreDataProperties.swift in Sources */,
 				C53AE6B9244B40ED00A60C5A /* Upload.swift in Sources */,
 				C53AE684244A50F100A60C5A /* Model.swift in Sources */,
 				C53AE66D244A50BE00A60C5A /* AppDelegate.swift in Sources */,
@@ -199,6 +206,7 @@
 				C53AE674244A50BE00A60C5A /* ContentView.swift in Sources */,
 				C53AE6B7244B40D500A60C5A /* Favorites.swift in Sources */,
 				C53AE6B5244B3AEF00A60C5A /* Mainboard.swift in Sources */,
+				C53AE6CE244D708200A60C5A /* FavoritesTable+CoreDataClass.swift in Sources */,
 				C53AE6BF244BE3F600A60C5A /* Decoder.swift in Sources */,
 				C53AE66F244A50BE00A60C5A /* SceneDelegate.swift in Sources */,
 			);

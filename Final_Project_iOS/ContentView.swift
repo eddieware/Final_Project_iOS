@@ -12,6 +12,7 @@ import AVKit
 
 struct ContentView: View {
     let font1 = Font.system(size: 25).bold()
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     @ObservedObject var fetch = FetchToDo()
     
@@ -35,6 +36,14 @@ struct ContentView: View {
                             Spacer()
                             Button(action: {
                                 
+                                let objBook = FavoritesTable(context: self.managedObjectContext)
+                                objBook.id = Int32(todo.id)
+                                objBook.title = todo.authors
+                                objBook.descript = todo.description
+                                objBook.image = todo.image
+                                objBook.year = Int16(todo.year)
+                                try? self.managedObjectContext.save()
+                                
                             print("favorite  button pressed!!!!!!!!")
                                 
                             }) {Image(systemName: "heart.fill").font(self.font1)}
@@ -53,7 +62,7 @@ struct ContentView: View {
                         
                         
                     }
-                }.navigationBarTitle("Books App")
+                }.navigationBarTitle("BooksApp")
                
             }
             

@@ -10,6 +10,10 @@ import Foundation
 import SwiftUI
 import Combine
 
+struct PopularBooks: Codable {
+    var bookResults : [Book]
+}
+
 struct Book: Codable, Identifiable {
     
     public var id: Int
@@ -26,7 +30,7 @@ struct Book: Codable, Identifiable {
 
 //The struct conforms to the Codable protocol to be able to decode the model from the JSON File and the struct conforms to the Identifiable protocol, which allows the items to be listed in a List.
 class FetchToDo: ObservableObject {
- 
+ @Environment(\.managedObjectContext) var managedObjectContext
     
   @Published var todos = [Book]() //Encierras el modelo en una variable @Published properti wraper usada en classes para compartir el valor de la variable
      
@@ -41,6 +45,19 @@ class FetchToDo: ObservableObject {
                     //print(decodedData) //contiene el arreglo de todo el json
                     DispatchQueue.main.async {
                         self.todos = decodedData
+                        
+                       for booksData in decodedData{
+                        let objBook = FavoritesTable(context: self.managedObjectContext)
+                        objBook.id = Int32(booksData.id)
+                        objBook.title = booksData.authors
+                        objBook.descript = booksData.description
+                        objBook.image = booksData.image
+                        objBook.year = Int16(booksData.year)
+                        
+                        }
+                        try? self.managedObjectContext.save()
+                        self.todos = decodedData
+                        
                         print("GET Parse success")
                         // Si da error in parse revisar tipo de dato y estructura del Json
                     }
