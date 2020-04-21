@@ -34,7 +34,7 @@ class FetchToDo: ObservableObject {
     
   @Published var todos = [Book]() //Encierras el modelo en una variable @Published properti wraper usada en classes para compartir el valor de la variable
      
-    init() {
+    func loadTodo() {
         let url = URL(string: "https://covid19gto.alexfranco.dev/api/books/")! //forzar valor
         // 2.
         URLSession.shared.dataTask(with: url) {(data, response, error) in

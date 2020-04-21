@@ -62,7 +62,8 @@ struct ContentView: View {
                         
                         
                     }
-                }.navigationBarTitle("BooksApp")
+                }.onAppear(perform: self.fetch.loadTodo)
+                .navigationBarTitle("BooksApp")
                
             }
             

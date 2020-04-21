@@ -40,6 +40,7 @@ var body: some View {
     }
     
     func loadFavorites(){
+        listFavorites = [Book]()
         for booksData in self.booksDB{
             let objBook = Book(id: Int(booksData.id), title: booksData.title ?? "", authors: booksData.authors ?? "", description: booksData.description, image: booksData.image ?? "", year: Int(booksData.year))
             

@@ -32,10 +32,9 @@ var body: some View {
             TextField("book Author: ", text: $postAuthors)
             TextField("book Description: ", text: $postDescription)
             TextField("book url: ", text: $postImage)
-             Section (header: Text("Table")){
-                               TextField("Book year", text: $postYear)
+            TextField("Book year", text: $postYear)
                                    .keyboardType(.numberPad)
-                           }
+                           
             
             
            Button(action: {
@@ -69,7 +68,7 @@ var body: some View {
                 "authors":"\(self.postAuthors)",
                 "description":"\(self.postDescription)",
                  "image":"https://i.pinimg.com/564x/30/05/b5/3005b5d30d935bf3bb00011e2f427308.jpg",
-                 "year":"2020"]
+                 "year":"\(self.postYear)"]
              newRequest.httpBody = newJSON.percentEncoded()
 
              let newSession = URLSession.shared
