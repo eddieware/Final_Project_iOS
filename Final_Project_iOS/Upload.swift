@@ -67,7 +67,7 @@ var body: some View {
                  "title":"\(self.postTitle)",
                 "authors":"\(self.postAuthors)",
                 "description":"\(self.postDescription)",
-                 "image":"https://i.pinimg.com/564x/30/05/b5/3005b5d30d935bf3bb00011e2f427308.jpg",
+                 "image":"\(self.postImage)",
                  "year":"\(self.postYear)"]
              newRequest.httpBody = newJSON.percentEncoded()
 
