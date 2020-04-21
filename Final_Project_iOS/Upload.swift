@@ -12,7 +12,11 @@ import AVKit
 struct Upload: View {
 
     @State private var posting: Book?
-    
+    @State private var postTitle = ""
+    @State private var postAuthors = ""
+    @State private var postDescription = ""
+    @State private var postImage = ""
+    @State private var postYear = ""
     
    
     
@@ -20,13 +24,29 @@ var body: some View {
    
    
     NavigationView{
+         
         List{
-            Text("Something To Upload here")
-            Button(action: {
-                       self.superUpload()
-                   print("pressed!!!!!!!!")
+          
+        
+            TextField("book title: ", text: $postTitle)
+            TextField("book Author: ", text: $postAuthors)
+            TextField("book Description: ", text: $postDescription)
+            TextField("book url: ", text: $postImage)
+             Section (header: Text("Table")){
+                               TextField("Book year", text: $postYear)
+                                   .keyboardType(.numberPad)
+                           }
+            
+            
+           Button(action: {
+                       self.superUpload()//activar la funcion para cargar
+            print("Add pressed!!!!!!!")
+            
+            
                    }) {Text("Clickme")}
+            
         }.navigationBarTitle("Upload Book") //Fin List
+         
         
        
         
@@ -45,9 +65,9 @@ var body: some View {
              newRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
              newRequest.httpMethod = "POST"
              let newJSON : [String:Any] = [
-                 "title":"Eduardo Book",
-                 "authors":"Eduardo Mejia",
-                 "description":"Book About Me",
+                 "title":"\(self.postTitle)",
+                "authors":"\(self.postAuthors)",
+                "description":"\(self.postDescription)",
                  "image":"https://i.pinimg.com/564x/30/05/b5/3005b5d30d935bf3bb00011e2f427308.jpg",
                  "year":"2020"]
              newRequest.httpBody = newJSON.percentEncoded()
