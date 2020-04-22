@@ -10,6 +10,7 @@ import Network
 import AVKit
 
 struct Upload: View {
+    let font1 = Font.system(size: 25).bold()
 
     @State private var posting: Book?
     @State private var postTitle = ""
@@ -37,14 +38,14 @@ var body: some View {
                            
             
             
-           Button(action: {
-                       self.superUpload()//activar la funcion para cargar
-            print("Add pressed!!!!!!!")
-            
-            
-                   }) {Text("Clickme")}
             
         }.navigationBarTitle("Upload Book") //Fin List
+        .navigationBarItems(trailing:Button(action: {
+                   self.superUpload()//activar la funcion para cargar
+        print("Add pressed!!!!!!!")
+        
+        
+        })  {Image(systemName: "square.and.arrow.up.fill").font(font1)})
          
         
        
